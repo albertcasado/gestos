@@ -43,7 +43,7 @@ $iconMuted:         #eee;
   width: auto;
   height: auto;
   line-height: normal;
-  vertical-align: baseline;
+  vertical-align: sub;
   background-image: none;
   background-position: 0% 0%;
   background-repeat: repeat;
@@ -102,12 +102,12 @@ a {
 
 /* \f020 doesn't work in Safari. all shifted one down */
 
-.icon-hold-wait:before                { content: "\f063"; }
-.icon-hold:before                     { content: "\f068"; }
-.icon-tap-hold:before                 { content: "\f069"; }
-.icon-tap-hold-wait:before            { content: "\f06a"; }
-.icon-hold-element:before             { content: "\f06b"; }
-.icon-2finger-double-tap--hold:before { content: "\f06c"; }
-.icon-2finger-tap--hold:before        { content: "\f06d"; }
+.icon-hold-wait:before                { content: "\0063"; }
+.icon-hold:before                     { content: "\0068"; }
+.icon-tap-hold:before                 { content: "\0069"; }
+.icon-tap-hold-wait:before            { content: "\006a"; }
+.icon-hold-element:before             { content: "\006b"; }
+.icon-2finger-double-tap--hold:before { content: "\006c"; }
+.icon-2finger-tap--hold:before        { content: "\006d"; }
 
 

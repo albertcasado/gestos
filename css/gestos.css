@@ -1,0 +1,10 @@
+/*
+ *  Gestos 0.1
+ *  Multitouch gestures iconic font
+ *  -------------------------------------------------------
+ *
+ *  License
+ *  -------------------------------------------------------
+ *  Please attribute: "Gestos. Albert Casado - https://github.com/albertcasado/gestos"
+ *
+ */@font-face{font-family:'Gestos';src:url("../fonts/Gestos-Regular.eot");src:local("☺"),url("../fonts/Gestos-Regular.ttf") format("truetype"),url("../fonts/Gestos-Regular.svg") format("svg");font-weight:normal;font-style:normal}[class^="icon-"],[class*=" icon-"]{font-family:Gestos;font-weight:normal;font-style:normal;text-decoration:inherit;-webkit-font-smoothing:antialiased;display:inline;width:auto;height:auto;line-height:normal;vertical-align:sub;background-image:none;background-position:0% 0%;background-repeat:repeat;margin-top:0}[class^="icon-"]:before,[class*=" icon-"]:before{text-decoration:inherit;display:inline-block;speak:none}a [class^="icon-"],a [class*=" icon-"]{display:inline-block}.icon-muted{color:#eee}.icon-2x{font-size:2em}.icon-2x.icon-border{border-width:2px;-webkit-border-radius:4px;-moz-border-radius:4px;border-radius:4px}.icon-3x{font-size:3em}.icon-3x.icon-border{border-width:3px;-webkit-border-radius:5px;-moz-border-radius:5px;border-radius:5px}.icon-4x{font-size:4em}.icon-4x.icon-border{border-width:4px;-webkit-border-radius:6px;-moz-border-radius:6px;border-radius:6px}.icon-hold-wait:before{content:"\0063"}.icon-hold:before{content:"\0068"}.icon-tap-hold:before{content:"\0069"}.icon-tap-hold-wait:before{content:"\006a"}.icon-hold-element:before{content:"\006b"}.icon-2finger-double-tap--hold:before{content:"\006c"}.icon-2finger-tap--hold:before{content:"\006d"}
