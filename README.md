@@ -1,5 +1,5 @@
 #Gestos 0.1
-##Multitouch gestures iconic font
+##Multi-touch gestures iconic font
 
 I post it on
 https://github.com/albertcasado/gestos
