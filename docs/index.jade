@@ -1,40 +1,464 @@
 !!! 5
 html
   head
-    title Gestos - Multitouch gestures iconic font
+    title Gestos. Multi-touch gestures iconic font
     meta(charset="utf-8")
     meta(http-equiv="X-UA-Compatible", content="IE=edge,chrome=1")
     meta(name="description", content="Gestos Multitouch gestures iconic font")
     meta(name="viewport", content="width=device-width")
     link(rel="stylesheet", href="../css/gestos.css")
+    // collapse for presentation
+    script(src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js")
+    script(src="js/jquery.collapse.js")
+    script(src="js/jquery.collapse_storage.js")
+    script(src="js/jquery.collapse_cookie_storage.js")
+
     // styles just for presentation here
     style.
-     *{font-family: "Hevetica Neue", Helvetica, Arial, sans-serif;}
+     *{font-family: "Hevetica Neue", Helvetica, Arial, sans-serif; font-weight:300;}
+     strong {font-weight:600;}
+     small {color:#7f7f7f;}
      body {width:978px; margin:0 auto;}
-     ul {list-style:none;}
-     i{font-size:48px}
-     li:hover {color:#09c;}
+     h2 a{border-bottom:1px solid #999;text-decoration:none; color:#333; display:block;}
+     h2 a:hover {color:#c08;}
+     h2 a:before {content:"+";color:#c08; font-weight:600; padding:5px;}
+     h2.open a:before {content:"-";padding-right:11px;}
+     dl {-webkit-column-count:3; text-align:center; margin-bottom:5em;}
+     dl.no-cols {-webkit-column-count:1 !important;}
+     dl.two-cols {-webkit-column-count:2 !important;}
+     dd {margin: 1em 0 2em; color:#7f7f7f;}
+     i{font-size:48px; padding:5px}
+     dt:hover + dd {color:#c08;}
+     footer {border-top:1px solid #999}
 
   body
     header
-      h1 Gestos 
-        small Multitouch gestures iconic font
-    section
-      h2 Gestos icons list
-      h3 One finger
-      ul
-        li
-          i.icon-hold-wait
-          strong  Hold and Wait 
-        li
-          i.icon-hold
-          strong  Hold 
-        li
-          i.icon-tap-hold
-          strong  Tap and hold
-        li
-          i.icon-tap-hold-wait
-          strong  Tap and hold and wait
+      h1: strong Gestos 
+        small Multi-    touch gestures iconic font
+    section#collapse(data-collapse="persist")
+      h2 Taps 
+      dl
+        dt: i.gest-hold
+        dd Hold 
+        dt: i.gest-hold-element
+        dd Hold element
+        dt: i.gest-long-hold
+        dd Long hold 
+        dt: i.gest-hold-wait
+        dd Hold and wait
+        dt: i.gest-no-hold
+        dd No hold 
+        dt: i.gest-tap
+        dd Tap 
+        dt: i.gest-double-tap
+        dd Double tap 
+        dt: i.gest-triple-tap
+        dd Triple tap 
+        dt: i.gest-no-tap
+        dd No tap 
+        dt: i.gest-tap-hold
+        dd Tap and hold 
+        dt: i.gest-tap-long-hold
+        dd Tap and long hold
+        dt: i.gest-2f-hold--tap
+        dd Left hold, right tap
+        dt: i.gest-2f-hold--double-tap
+        dd Left hold, right double tap
+        dt: i.gest-2f-tap--hold
+        dd Left tap, right hold
+        dt: i.gest-2f-double-tap--hold
+        dd Left double tap, right hold
+
+
+      h2 Movements
+      dl
+        dt
+          i.gest-scroll-free
+          i.gest-scroll-horizontal
+          i.gest-scroll-vertical
+        dd Scroll <em>free/horizontal/vertical</em>
+        dt
+          i.gest-scroll-element-free
+          i.gest-scroll-element-horizontal
+          i.gest-scroll-element-vertical
+        dd Scroll element <em>free/horizontal/vertical</em>
+        dt
+          i.gest-swipe-free
+          i.gest-swipe-horizontal
+          i.gest-swipe-vertical
+        dd Swipe <em>free/horizontal/vertical</em>
+        dt
+          i.gest-flick-free
+          i.gest-flick-horizontal
+          i.gest-flick-vertical
+        dd Flick <em>free/horizontal/vertical</em>
+        dt
+          i.gest-pinch
+          i.gest-pinch-ending
+        dd Pinch <em>& pinch ending</em>
+        dt
+          i.gest-spread
+          i.gest-spread-ending
+        dd Spread <em>& spread ending</em>
+        dt
+          i.gest-arc
+          i.gest-arc-ccw
+        dd Arc <em>& arc counterclockwise</em>
+        dt
+          i.gest-rotate
+          i.gest-rotate-ccw
+        dd Rotate <em>& rotate counterclockwise</em>
+        dt
+          i.gest-2f-rotate
+          i.gest-2f-rotate-ccw
+        dd 2 fingers rotate <em>& 2FR counterclockwise</em>
+
+
+      h2 Advanced gestures
+      dl
+        dt
+          i.gest-swipe-left
+          i.gest-swipe-right
+          i.gest-swipe-up
+          i.gest-swipe-down
+        dd Swipe <em>left/right/up/down</em> 
+        dt
+          i.gest-swipe-left-edge
+          i.gest-swipe-right-edge
+          i.gest-swipe-up-edge
+          i.gest-swipe-down-edge
+        dd Swipe <em>left/right/up/down</em> from edge
+        dt
+          i.gest-swipe-left-edge-alt
+          i.gest-swipe-right-edge-alt
+          i.gest-swipe-up-edge-alt
+          i.gest-swipe-down-edge-alt
+        dd Swipe <em>left/right/up/down</em> from edge Alt.
+        dt
+          i.gest-flick-left-edge
+          i.gest-flick-right-edge
+          i.gest-flick-up-edge
+          i.gest-flick-down-edge
+        dd Flick <em>left/right/up/down</em> from edge
+        dt
+          i.gest-flick-left-edge-alt
+          i.gest-flick-right-edge-alt
+          i.gest-flick-up-edge-alt
+          i.gest-flick-down-edge-alt
+        dd Flick <em>left/right/up/down</em> from edge Alt.
+        dt
+          i.gest-flick-left
+          i.gest-flick-right
+          i.gest-flick-up
+          i.gest-flick-down
+        dd Flick <em>left/right/up/down</em>
+        dt
+          i.gest-drag-left
+          i.gest-drag-right
+          i.gest-drag-elp
+          i.gest-drag-down 
+        dd Drag <em>left/right/up/down</em>
+        dt
+          i.gest-drag-element-left
+          i.gest-drag-element-right
+          i.gest-drag-element-up
+          i.gest-drag-element-down
+        dd Drag element <em>left/right/up/down</em>
+        dt
+          i.gest-drag-hold-left
+          i.gest-drag-hold-right
+          i.gest-drag-hold-up
+          i.gest-drag-hold-down
+        dd Drag <em>left/right/up/down</em> and hold
+        dt
+          i.gest-drag-hold-element-left
+          i.gest-drag-hold-element-right
+          i.gest-drag-hold-element-up
+          i.gest-drag-hold-element-down
+        dd Drag <em>left/right/up/down</em> and hold element
+        dt
+          i.gest-nudge-left
+          i.gest-nudge-right
+          i.gest-nudge-up
+          i.gest-nudge-down
+        dd Nudge <em>left/right/up/down</em>
+        dt
+          i.gest-nudge-element-left
+          i.gest-nudge-element-right
+          i.gest-nudge-element-up
+          i.gest-nudge-element-down
+        dd Nudge element <em>left/right/up/down</em>
+
+
+      h2 Fingers taps
+      dl.no-cols
+        dt
+          i.gest-2f-hold
+          i.gest-2f-long-hold
+          i.gest-2f-hold-element
+          i.gest-2f-tap
+          i.gest-2f-double-tap
+          i.gest-2f-triple-tap
+          i.gest-2f-tap-hold
+          i.gest-2f-tap-long-hold
+        dd 2 fingers <em>hold/long hold/hold element/tap/double tap/triple tap/tap and hold/tap and long hold</em>  
+        dt
+          i.gest-3f-hold
+          i.gest-3f-long-hold
+          i.gest-3f-hold-element
+          i.gest-3f-tap
+          i.gest-3f-double-tap
+          i.gest-3f-triple-tap
+          i.gest-3f-tap-hold
+          i.gest-3f-tap-long-hold
+        dd 3 fingers <em>hold/long hold/hold element/tap/double tap/triple tap/tap and hold/tap and long hold</em>  
+        dt
+          i.gest-4f-hold
+          i.gest-4f-long-hold
+          i.gest-4f-hold-element
+          i.gest-4f-tap
+          i.gest-4f-double-tap
+          i.gest-4f-triple-tap
+          i.gest-4f-tap-hold
+          i.gest-4f-tap-long-hold
+        dd 4 fingers <em>hold/long hold/hold element/tap/double tap/triple tap/tap and hold/tap and long hold</em>  
+        dt
+          i.gest-4f-hold-lh
+          i.gest-4f-long-hold-lh
+          i.gest-4f-hold-element-lh
+          i.gest-4f-tap-lh
+          i.gest-4f-double-tap-lh
+          i.gest-4f-triple-tap-lh
+          i.gest-4f-tap-hold-lh
+          i.gest-4f-tap-long-hold-lh
+        dd 4 fingers <em>hold/long hold/hold element/tap/double tap/triple tap/tap and hold/tap and long hold</em> left hand  
+        dt
+          i.gest-5f-hold
+          i.gest-5f-long-hold
+          i.gest-5f-hold-element
+          i.gest-5f-tap
+          i.gest-5f-double-tap
+          i.gest-5f-triple-tap
+          i.gest-5f-tap-hold
+          i.gest-5f-tap-long-hold
+        dd 5 fingers <em>hold/long hold/hold element/tap/double tap/triple tap/tap and hold/tap and long hold</em>  
+        dt
+          i.gest-5f-hold-lh
+          i.gest-5f-long-hold-lh
+          i.gest-5f-hold-element-lh
+          i.gest-5f-tap-lh
+          i.gest-5f-double-tap-lh
+          i.gest-5f-triple-tap-lh
+          i.gest-5f-tap-hold-lh
+          i.gest-5f-tap-long-hold-lh
+        dd 5 fingers <em>hold/long hold/hold element/tap/double tap/triple tap/tap and hold/tap and long hold</em> left hand  
+
+
+      h2 2 fingers gestures
+      dl.two-cols
+        dt
+          i.gest-2f-drag-left
+          i.gest-2f-drag-right
+          i.gest-2f-drag-up
+          i.gest-2f-drag-down
+        dd 2 fingers <em>drag</em>  
+        dt
+          i.gest-2f-drag-element-left
+          i.gest-2f-drag-element-right
+          i.gest-2f-drag-element-up
+          i.gest-2f-drag-element-down
+        dd 2 fingers <em>drag element</em>  
+        dt
+          i.gest-2f-swipe-left
+          i.gest-2f-swipe-right
+          i.gest-2f-swipe-up
+          i.gest-2f-swipe-down
+        dd 2 fingers <em>swipe</em>  
+        dt
+          i.gest-2f-flick-left
+          i.gest-2f-flick-right
+          i.gest-2f-flick-up
+          i.gest-2f-flick-down
+        dd 2 fingers <em>flick</em>      
+        dt
+          i.gest-2f-scroll-free
+          i.gest-2f-scroll-horizontal
+          i.gest-2f-scroll-vertical
+        dd 2 fingers <em>scroll</em>      
+
+
+      h2 3 fingers gestures
+      dl.two-cols
+        dt
+          i.gest-3f-drag-left
+          i.gest-3f-drag-right
+          i.gest-3f-drag-up
+          i.gest-3f-drag-down
+        dd 3 fingers <em>drag</em>  
+        dt
+          i.gest-3f-drag-element-left
+          i.gest-3f-drag-element-right
+          i.gest-3f-drag-element-up
+          i.gest-3f-drag-element-down
+        dd 3 fingers <em>darg element</em>  
+        dt
+          i.gest-3f-swipe-left
+          i.gest-3f-swipe-right
+          i.gest-3f-swipe-up
+          i.gest-3f-swipe-down
+        dd 3 fingers <em>swipe</em>  
+        dt
+          i.gest-3f-flick-left
+          i.gest-3f-flick-right
+          i.gest-3f-flick-up
+          i.gest-3f-flick-down
+        dd 3 fingers <em>flick</em>      
+        dt
+          i.gest-3f-scroll-free
+          i.gest-3f-scroll-horizontal
+          i.gest-3f-scroll-vertical
+        dd 3 fingers <em>scroll</em>    
+
+
+      h2 4 fingers gestures 
+      dl.two-cols
+        dt
+          i.gest-4f-drag-left
+          i.gest-4f-drag-right
+          i.gest-4f-drag-up
+          i.gest-4f-drag-down
+        dd 4 fingers <em>drag</em>  
+        dt
+          i.gest-4f-drag-element-left
+          i.gest-4f-drag-element-right
+          i.gest-4f-drag-element-up
+          i.gest-4f-drag-element-down
+        dd 4 fingers <em>darg element</em>  
+        dt
+          i.gest-4f-swipe-left
+          i.gest-4f-swipe-right
+          i.gest-4f-swipe-up
+          i.gest-4f-swipe-down
+        dd 4 fingers <em>swipe</em>  
+        dt
+          i.gest-4f-flick-left
+          i.gest-4f-flick-right
+          i.gest-4f-flick-up
+          i.gest-4f-flick-down
+        dd 4 fingers <em>flick</em>      
+        dt
+          i.gest-4f-scroll-free
+          i.gest-4f-scroll-horizontal
+          i.gest-4f-scroll-vertical
+        dd 4 fingers <em>scroll</em>    
            
+
+      h2 4 fingers gestures 
+        small left hand
+      dl.two-cols
+        dt
+          i.gest-4f-drag-left-lh
+          i.gest-4f-drag-right-lh
+          i.gest-4f-drag-up-lh
+          i.gest-4f-drag-down-lh
+        dd 4 fingers <em>drag</em>  
+        dt
+          i.gest-4f-drag-element-left-lh
+          i.gest-4f-drag-element-right-lh
+          i.gest-4f-drag-element-up-lh
+          i.gest-4f-drag-element-down-lh
+        dd 4 fingers <em>darg element</em>  
+        dt
+          i.gest-4f-swipe-left-lh
+          i.gest-4f-swipe-right-lh
+          i.gest-4f-swipe-up-lh
+          i.gest-4f-swipe-down-lh
+        dd 4 fingers <em>swipe</em>  
+        dt
+          i.gest-4f-flick-left-lh
+          i.gest-4f-flick-right-lh
+          i.gest-4f-flick-up-lh
+          i.gest-4f-flick-down-lh
+        dd 4 fingers <em>flick</em>      
+        dt
+          i.gest-4f-scroll-free-lh
+          i.gest-4f-scroll-horizontal-lh
+          i.gest-4f-scroll-vertical-lh
+        dd 4 fingers <em>scroll</em>    
+
+
+      h2 5 fingers gestures 
+      dl.no-cols
+        dt
+          i.gest-5f-drag-left
+          i.gest-5f-drag-right
+          i.gest-5f-drag-up
+          i.gest-5f-drag-down
+        dd 5 fingers <em>drag</em>  
+        dt
+          i.gest-5f-drag-element-left
+          i.gest-5f-drag-element-right
+          i.gest-5f-drag-element-up
+          i.gest-5f-drag-element-down
+        dd 5 fingers <em>darg element</em>  
+        dt
+          i.gest-5f-swipe-left
+          i.gest-5f-swipe-right
+          i.gest-5f-swipe-up
+          i.gest-5f-swipe-down
+        dd 5 fingers <em>swipe</em>  
+        dt
+          i.gest-5f-flick-left
+          i.gest-5f-flick-right
+          i.gest-5f-flick-up
+          i.gest-5f-flick-down
+        dd 5 fingers <em>flick</em>      
+        dt
+          i.gest-5f-scroll-free
+          i.gest-5f-scroll-horizontal
+          i.gest-5f-scroll-vertical
+        dd 5 fingers <em>scroll</em>    
+           
+
+      h2 5 fingers gestures 
+        small left hand
+      dl.no-cols
+        dt
+          i.gest-5f-drag-left-lh
+          i.gest-5f-drag-right-lh
+          i.gest-5f-drag-up-lh
+          i.gest-5f-drag-down-lh
+        dd 5 fingers <em>drag</em>  
+        dt
+          i.gest-5f-drag-element-left-lh
+          i.gest-5f-drag-element-right-lh
+          i.gest-5f-drag-element-up-lh
+          i.gest-5f-drag-element-down-lh
+        dd 5 fingers <em>darg element</em>  
+        dt
+          i.gest-5f-swipe-left-lh
+          i.gest-5f-swipe-right-lh
+          i.gest-5f-swipe-up-lh
+          i.gest-5f-swipe-down-lh
+        dd 5 fingers <em>swipe</em>  
+        dt
+          i.gest-5f-flick-left-lh
+          i.gest-5f-flick-right-lh
+          i.gest-5f-flick-up-lh
+          i.gest-5f-flick-down-lh
+        dd 5 fingers <em>flick</em>      
+        dt
+          i.gest-5f-scroll-free-lh
+          i.gest-5f-scroll-horizontal-lh
+          i.gest-5f-scroll-vertical-lh
+        dd 5 fingers <em>scroll</em>  
+
+
+
     footer
-      p © Albert Casado
+      p © Albert Casado - March 2013
+
+    script(type='text/javascript')
+      $("#collapse").collapse();
+
+

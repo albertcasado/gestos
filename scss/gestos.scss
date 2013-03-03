@@ -1,6 +1,6 @@
 /*!
  *  Gestos 0.1
- *  Multitouch gestures iconic font
+ *  Multi-touch gestures iconic font
  *  -------------------------------------------------------
  *
  *  License
@@ -11,7 +11,7 @@
 
 $fontGestos:   "../fonts" !default;
 $borderColor:       #eee;
-$iconMuted:         #eee;
+$gestMuted:         #eee;
 @mixin border-radius($radius) { -webkit-border-radius: $radius; -moz-border-radius: $radius; border-radius: $radius; }
 
 
@@ -30,8 +30,8 @@ $iconMuted:         #eee;
 
 /*  Styles
     ------------------------------------------------------- */
-[class^="icon-"],
-[class*=" icon-"] {
+[class^="gest-"],
+[class*=" gest-"] {
   font-family: Gestos;
   font-weight: normal;
   font-style: normal;
@@ -51,46 +51,46 @@ $iconMuted:         #eee;
 }
 
 
-[class^="icon-"]:before,
-[class*=" icon-"]:before {
+[class^="gest-"]:before,
+[class*=" gest-"]:before {
   text-decoration: inherit;
   display: inline-block;
   speak: none;
 }
 
-/* makes sure icons active on rollover in links */
+/* makes sure gestures active on rollover in links */
 a {
-  [class^="icon-"],
-  [class*=" icon-"] {
+  [class^="gest-"],
+  [class*=" gest-"] {
     display: inline-block;
   }
 }
 
-.icon-muted {
-  color: $iconMuted;
+.gest-muted {
+  color: $gestMuted;
 }
 
 
-// Icon Sizes
+// gest Sizes
 // -------------------------
 
-.icon-2x {
+.gest-2x {
   font-size: 2em;
-  &.icon-border {
+  &.gest-border {
     border-width: 2px;
     @include border-radius(4px);
   }
 }
-.icon-3x {
+.gest-3x {
   font-size: 3em;
-  &.icon-border {
+  &.gest-border {
     border-width: 3px;
     @include border-radius(5px);
   }
 }
-.icon-4x {
+.gest-4x {
   font-size: 4em;
-  &.icon-border {
+  &.gest-border {
     border-width: 4px;
     @include border-radius(6px);
   }
@@ -98,16 +98,303 @@ a {
 
 
 /*  Based on Font Awesome. It uses the Unicode Private Use Area (PUA) to ensure screen
-    readers do not read off random characters that represent icons */
+    readers do not read off random characters that represent gests */
 
 /* \f020 doesn't work in Safari. all shifted one down */
+.gest-2f-flick-left:before            { content: "\0021"; }
+.gest-2f-flick-right:before           { content: "\0022"; }
+.gest-2f-flick-up:before              { content: "\0023"; }
+.gest-2f-flick-down:before            { content: "\0024"; }
+.gest-2f-drag-element-left:before     { content: "\0025"; }
+.gest-2f-drag-element-right:before    { content: "\0026"; }
+.gest-2f-drag-element-up:before       { content: "\0027"; }
+.gest-2f-drag-element-down:before     { content: "\0028"; }
+.gest-3f-drag-left:before             { content: "\0029"; }
+.gest-3f-drag-right:before            { content: "\002a"; }
+.gest-3f-drag-up:before               { content: "\002b"; }
+.gest-3f-drag-down:before             { content: "\002c"; }
+.gest-3f-swipe-left:before            { content: "\002d"; }
+.gest-3f-swipe-right:before           { content: "\002e"; }
+.gest-3f-swipe-up:before              { content: "\002f"; }
 
-.icon-hold-wait:before                { content: "\0063"; }
-.icon-hold:before                     { content: "\0068"; }
-.icon-tap-hold:before                 { content: "\0069"; }
-.icon-tap-hold-wait:before            { content: "\006a"; }
-.icon-hold-element:before             { content: "\006b"; }
-.icon-2finger-double-tap--hold:before { content: "\006c"; }
-.icon-2finger-tap--hold:before        { content: "\006d"; }
+//.gest-2f-flick-left:before            { content: "\0030"; }
+//.gest-2f-flick-left:before            { content: "\0031"; }
+//.gest-2f-flick-right:before           { content: "\0032"; }
+//.gest-2f-flick-up:before              { content: "\0033"; }
+//.gest-2f-flick-down:before            { content: "\0034"; }
+//.gest-2f-drag-element-left:before     { content: "\0035"; }
+//.gest-2f-drag-element-right:before    { content: "\0036"; }
+//.gest-2f-drag-element-up:before       { content: "\0037"; }
+//.gest-2f-drag-element-down:before     { content: "\0038"; }
+//.gest-3f-drag-left:before             { content: "\0039"; }
+.gest-3f-swipe-down:before            { content: "\003a"; }
+.gest-3f-flick-left:before            { content: "\003b"; }
+.gest-3f-flick-right:before           { content: "\003c"; }
+.gest-3f-flick-up:before              { content: "\003d"; }
+.gest-3f-flick-down:before            { content: "\003e"; }
+.gest-3f-drag-element-left:before     { content: "\003f"; }
+
+.gest-3f-drag-element-right:before    { content: "\0040"; }
+.gest-3f-hold:before                  { content: "\0041"; }
+.gest-3f-tap-hold:before              { content: "\0042"; }
+.gest-2f-long-hold:before             { content: "\0043"; }
+.gest-3f-tap-long-hold:before         { content: "\0044"; }
+.gest-3f-tap:before                   { content: "\0045"; }
+.gest-3f-double-tap:before            { content: "\0046"; }
+.gest-3f-triple-tap:before            { content: "\0047"; }
+.gest-2f-hold:before                  { content: "\0048"; }
+.gest-2f-tap-hold:before              { content: "\0049"; }
+.gest-2f-tap-long-hold:before         { content: "\004a"; }
+.gest-2f-hold-element:before          { content: "\004b"; }
+.gest-2f-hold--double-tap:before      { content: "\004c"; }
+.gest-2f-hold--tap:before             { content: "\004d"; }
+.gest-3f-hold-element:before          { content: "\004e"; }
+.gest-4f-hold-element:before          { content: "\004f"; }
+
+.gest-4f-hold-element-lh:before       { content: "\0050"; }
+.gest-3f-long-hold:before             { content: "\0051"; }
+.gest-4f-hold:before                  { content: "\0052"; }
+.gest-4f-hold-lh:before               { content: "\0053"; }
+.gest-2f-tap:before                   { content: "\0054"; }
+.gest-2f-double-tap:before            { content: "\0055"; }
+.gest-2f-triple-tap:before            { content: "\0056"; }
+.gest-4f-tap:before                   { content: "\0057"; }
+.gest-4f-tap-lh:before                { content: "\0058"; }
+.gest-4f-double-tap:before            { content: "\0059"; }
+.gest-4f-double-tap-lh:before         { content: "\005a"; }
+.gest-3f-drag-element-up:before       { content: "\005b"; }
+.gest-3f-drag-element-down:before     { content: "\005c"; }
+.gest-4f-drag-element-left:before     { content: "\005d"; }
+.gest-4f-drag-element-right:before    { content: "\005e"; }
+.gest-4f-drag-element-up:before       { content: "\005f"; }
+
+.gest-4f-drag-element-down:before     { content: "\0060"; }
+.gest-arc:before                      { content: "\0061"; }
+.gest-arc-ccw:before                  { content: "\0062"; }
+.gest-long-hold:before                { content: "\0063"; }
+.gest-2f-rotate:before                { content: "\0064"; }
+.gest-2f-rotate-ccw:before            { content: "\0065"; }
+.gest-2f-scroll-free:before           { content: "\0066"; }
+.gest-rotate-ccw:before               { content: "\0067"; }
+.gest-hold:before                     { content: "\0068"; }
+.gest-tap-hold:before                 { content: "\0069"; }
+.gest-tap-long-hold:before            { content: "\006a"; }
+.gest-hold-element:before             { content: "\006b"; }
+.gest-2f-double-tap--hold:before      { content: "\006c"; }
+.gest-2f-tap--hold:before             { content: "\006d"; }
+.gest-2f-scroll-vertical:before       { content: "\006e"; }
+.gest-2f-scroll-horizontal:before     { content: "\006f"; }
+
+.gest-pinch:before                    { content: "\0070"; }
+.gest-scroll-free:before              { content: "\0071"; }
+.gest-rotate:before                   { content: "\0072"; }
+.gest-spread:before                   { content: "\0073"; }
+.gest-tap:before                      { content: "\0074"; }
+.gest-double-tap:before               { content: "\0075"; }
+.gest-triple-tap:before               { content: "\0076"; }
+.gest-hold-wait:before                { content: "\0077"; }
+.gest-no-hold:before                  { content: "\0078"; }
+.gest-4f-triple-tap:before            { content: "\0079"; }
+.gest-4f-triple-tap-lh:before         { content: "\007a"; }
+.gest-4f-drag-left:before             { content: "\007b"; }
+.gest-4f-drag-right:before            { content: "\007c"; }
+.gest-4f-drag-up:before               { content: "\007d"; }
+.gest-4f-drag-down:before             { content: "\007e"; }
+
+//.gest-4f-swipe-:before                { content: "\00a0"; }
+.gest-4f-swipe-left:before            { content: "\00a1"; }
+.gest-4f-swipe-right:before           { content: "\00a2"; }
+.gest-4f-swipe-up:before              { content: "\00a3"; }
+//.gest-4f-swipe-:before                { content: "\00a4"; }
+.gest-4f-flick-left:before            { content: "\00a5"; }
+.gest-4f-flick-right:before           { content: "\00a6"; }
+.gest-4f-flick-up:before              { content: "\00a7"; }
+.gest-4f-flick-down:before            { content: "\00a8"; }
+//.gest-4f-swipe-left:before            { content: "\00a9"; }
+//.gest-4f-swipe-left:before            { content: "\00aa"; }
+.gest-4f-drag-element-left-lh:before  { content: "\00ab"; }
+.gest-4f-drag-element-right-lh:before { content: "\00ac"; }
+//.gest-4f-drag-element-up-lh:before    { content: "\00ad"; }
+.gest-4f-drag-element-up-lh:before    { content: "\00ae"; }
+.gest-4f-drag-element-down-lh:before  { content: "\00af"; }
+
+.gest-4f-drag-left-lh:before          { content: "\00b0"; }
+.gest-4f-drag-right-lh:before         { content: "\00b1"; }
+//.gest-4f-drag-right-lh:before         { content: "\00b2"; }
+//.gest-4f-swipe-up:before              { content: "\00b3"; }
+.gest-4f-drag-up-lh:before            { content: "\00b4"; }
+//.gest-4f-drag-down-lh:before          { content: "\00b5"; }
+.gest-4f-drag-down-lh:before          { content: "\00b6"; }
+.gest-4f-swipe-left-lh:before         { content: "\00b7"; }
+.gest-4f-swipe-right-lh:before        { content: "\00b8"; }
+//.gest-4f-swipe-left:before            { content: "\00b9"; }
+//.gest-4f-swipe-left:before            { content: "\00ba"; }
+.gest-4f-swipe-up-lh:before           { content: "\00bb"; }
+//.gest-4f-drag-element-right-lh:before { content: "\00bc"; }
+//.gest-4f-drag-element-up-lh:before    { content: "\00bd"; }
+//.gest-4f-drag-element-up-lh:before    { content: "\00be"; }
+.gest-4f-swipe-down-lh:before         { content: "\00bf"; }
+
+
+.gest-nudge-element-left:before       { content: "\00c0"; }
+.gest-nudge-element-right:before      { content: "\00c1"; }
+.gest-nudge-element-up:before         { content: "\00c2"; }
+.gest-swipe-free:before               { content: "\00c3"; }
+.gest-nudge-element-down:before       { content: "\00c4"; }
+.gest-swipe-vertical:before           { content: "\00c5"; }
+//.gest-nudge-element-up:before         { content: "\00c6"; }
+.gest-scroll-element-free:before      { content: "\00c7"; }
+.gest-2f-drag-left:before             { content: "\00c8"; }
+.gest-2f-drag-right:before            { content: "\00c9"; }
+.gest-2f-drag-up:before               { content: "\00ca"; }
+.gest-2f-drag-down:before             { content: "\00cb"; }
+.gest-flick-left-edge-alt:before      { content: "\00cc"; }
+.gest-flick-right-edge-alt:before     { content: "\00cd"; }
+.gest-flick-up-edge-alt:before        { content: "\00ce"; }
+.gest-flick-down-edge-alt:before      { content: "\00cf"; }
+
+.gest-scroll-element-vertical:before  { content: "\00d0"; }
+.gest-flick-vertical:before           { content: "\00d1"; }
+.gest-2f-swipe-left:before            { content: "\00d2"; }
+.gest-2f-swipe-right:before           { content: "\00d3"; }
+.gest-2f-swipe-up:before              { content: "\00d4"; }
+.gest-3f-scroll-horizontal:before     { content: "\00d5"; }
+.gest-2f-swipe-down:before            { content: "\00d6"; }
+.gest-4f-flick-left-lh:before         { content: "\00d7"; }
+.gest-3f-scroll-vertical:before       { content: "\00d8"; }
+.gest-flick-left-edge:before          { content: "\00d9"; }
+.gest-flick-right-edge:before         { content: "\00da"; }
+.gest-flick-up-edge:before            { content: "\00db"; }
+.gest-flick-down-edge:before          { content: "\00dc"; }
+.gest-swipe-right-edge-alt:before     { content: "\00dd"; }
+.gest-3f-scroll-free:before           { content: "\00de"; }
+.gest-spread-ending:before            { content: "\00df"; }
+
+.gest-swipe-left:before               { content: "\00e0"; }
+.gest-swipe-right:before              { content: "\00e1"; }
+.gest-swipe-up:before                 { content: "\00e2"; }
+.gest-flick-free:before               { content: "\00e3"; }
+.gest-swipe-down:before               { content: "\00e4"; }
+.gest-swipe-horizontal:before         { content: "\00e5"; }
+//.gest-swipe-up:before                 { content: "\00e6"; }
+.gest-no-tap:before                   { content: "\00e7"; }
+.gest-drag-element-left:before        { content: "\00e8"; }
+.gest-drag-element-right:before       { content: "\00e9"; }
+.gest-drag-element-up:before          { content: "\00ea"; }
+.gest-drag-element-down:before        { content: "\00eb"; }
+.gest-flick-left:before               { content: "\00ec"; }
+.gest-flick-right:before              { content: "\00ed"; }
+.gest-flick-up:before                 { content: "\00ee"; }
+.gest-flick-down:before               { content: "\00ef"; }
+
+.gest-scroll-element-horizontal:before{ content: "\00f0"; }
+.gest-flick-horizontal:before         { content: "\00f1"; }
+.gest-drag-left:before                { content: "\00f2"; }
+.gest-drag-right:before               { content: "\00f3"; }
+.gest-drag-up:before                  { content: "\00f4"; }
+.gest-scroll-horizontal:before        { content: "\00f5"; }
+.gest-drag-down:before                { content: "\00f6"; }
+.gest-4f-flick-right-lh:before        { content: "\00f7"; }
+.gest-scroll-vertical:before          { content: "\00f8"; }
+.gest-nudge-left:before               { content: "\00f9"; }
+.gest-nudge-right:before              { content: "\00fa"; }
+.gest-nudge-up:before                 { content: "\00fb"; }
+.gest-nudge-down:before               { content: "\00fc"; }
+.gest-swipe-right-edge:before         { content: "\00fd"; }
+.gest-pinch-ending:before             { content: "\00fe"; }
+.gest-swipe-down-edge:before          { content: "\00ff"; }
+
+.gest-4f-flick-up-lh:before           { content: "\013f"; }
+
+.gest-4f-flick-down-lh:before         { content: "\0140"; }
+
+.gest-5f-hold-element:before          { content: "\0152"; }
+.gest-5f-hold-element-lh:before       { content: "\0153"; }
+
+.gest-5f-tap-long-hold:before         { content: "\0160"; }
+.gest-5f-tap-long-hold-lh:before      { content: "\0161"; }
+
+.gest-drag-hold-element-up:before     { content: "\0174"; }
+.gest-drag-hold-up:before             { content: "\0175"; }
+.gest-swipe-up-edge-alt:before        { content: "\0176"; }
+.gest-swipe-up-edge:before            { content: "\0177"; }
+.gest-swipe-down-edge-alt:before      { content: "\0178"; }
+.gest-5f-long-hold:before             { content: "\017d"; }
+.gest-5f-long-hold-lh:before          { content: "\017e"; }
+
+.gest-5f-tap-hold-lh:before           { content: "\0192"; }
+
+.gest-5f-hold-lh:before               { content: "\02c6"; }
+.gest-5f-hold:before                  { content: "\02c7"; }
+
+.gest-5f-tap:before                   { content: "\02d8"; }
+.gest-5f-tap-lh:before                { content: "\02d9"; }
+.gest-5f-double-tap-lh:before         { content: "\02da"; }
+.gest-5f-double-tap:before            { content: "\02db"; }
+.gest-5f-triple-tap-lh:before         { content: "\02dc"; }
+.gest-5f-triple-tap:before            { content: "\02dd"; }
+
+.gest-5f-tap-hold:before              { content: "\03bc"; }
+
+.gest-drag-hold-element-left:before   { content: "\1e80"; }
+.gest-drag-hold-left:before           { content: "\1e81"; }
+.gest-drag-hold-element-right:before  { content: "\1e82"; }
+.gest-drag-hold-right:before          { content: "\1e83"; }
+.gest-drag-hold-element-down:before   { content: "\1e84"; }
+.gest-drag-hold-down:before           { content: "\1e85"; }
+
+.gest-swipe-left-edge-alt:before      { content: "\1ef2"; }
+.gest-swipe-left-edge:before          { content: "\1ef3"; }
+
+.gest-5f-drag-left-lh:before          { content: "\2013"; }
+.gest-5f-drag-right:before            { content: "\2014"; }
+.gest-5f-drag-right-lh:before         { content: "\2018"; }
+.gest-5f-drag-left:before             { content: "\2019"; }
+.gest-5f-drag-up-lh:before            { content: "\201a"; }
+.gest-5f-drag-up:before               { content: "\201c"; }
+.gest-5f-drag-down-lh:before          { content: "\201d"; }
+.gest-5f-drag-down:before             { content: "\201e"; }
+
+.gest-5f-swipe-left-lh:before         { content: "\2020"; }
+.gest-5f-swipe-right:before           { content: "\2021"; }
+.gest-5f-swipe-left-lh:before         { content: "\2020"; }
+.gest-5f-swipe-right:before           { content: "\2021"; }
+.gest-5f-swipe-right-lh:before        { content: "\2022"; }
+.gest-5f-swipe-left:before            { content: "\2026"; }
+
+.gest-5f-swipe-up-lh:before           { content: "\2030"; }
+.gest-5f-swipe-up:before              { content: "\2039"; }
+.gest-5f-swipe-down-lh:before         { content: "\203a"; }
+
+.gest-5f-swipe-down:before            { content: "\20ac"; }
+
+.gest-5f-flick-left-lh:before         { content: "\2122"; }
+
+.gest-5f-flick-right:before           { content: "\2202"; }
+.gest-5f-flick-right-lh:before        { content: "\2205"; }
+.gest-5f-flick-left:before            { content: "\220f"; }
+
+.gest-5f-flick-up-lh:before           { content: "\2211"; }
+.gest-5f-flick-up:before              { content: "\2212"; }
+.gest-5f-flick-down-lh:before         { content: "\221a"; }
+.gest-5f-flick-down:before            { content: "\221e"; }
+
+.gest-4f-long-hold:before             { content: "\222b"; }
+
+.gest-4f-long-hold-lh:before          { content: "\2248"; }
+
+.gest-4f-tap-long-hold:before         { content: "\2260"; }
+.gest-4f-tap-long-hold-lh:before      { content: "\2264"; }
+.gest-4f-tap-hold-lh:before           { content: "\2265"; }
+
+.gest-4f-tap-hold:before              { content: "\25ca"; }
+
+
+
+
+
+
+
+
 
 

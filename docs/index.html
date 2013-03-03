@@ -1,38 +1,224 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Gestos - Multitouch gestures iconic font</title>
+    <title>Gestos. Multi-touch gestures iconic font</title>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="description" content="Gestos Multitouch gestures iconic font">
     <meta name="viewport" content="width=device-width">
     <link rel="stylesheet" href="../css/gestos.css">
+    <!-- collapse for presentation-->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+    <script src="js/jquery.collapse.js"></script>
+    <script src="js/jquery.collapse_storage.js"></script>
+    <script src="js/jquery.collapse_cookie_storage.js"></script>
     <!-- styles just for presentation here-->
     <style>
-      *{font-family: "Hevetica Neue", Helvetica, Arial, sans-serif;}
+      *{font-family: "Hevetica Neue", Helvetica, Arial, sans-serif; font-weight:300;}
+      strong {font-weight:600;}
+      small {color:#7f7f7f;}
       body {width:978px; margin:0 auto;}
-      ul {list-style:none;}
-      i{font-size:48px}
-      li:hover {color:#09c;}
+      h2 a{border-bottom:1px solid #999;text-decoration:none; color:#333; display:block;}
+      h2 a:hover {color:#c08;}
+      h2 a:before {content:"+";color:#c08; font-weight:600; padding:5px;}
+      h2.open a:before {content:"-";padding-right:11px;}
+      dl {-webkit-column-count:3; text-align:center; margin-bottom:5em;}
+      dl.no-cols {-webkit-column-count:1 !important;}
+      dl.two-cols {-webkit-column-count:2 !important;}
+      dd {margin: 1em 0 2em; color:#7f7f7f;}
+      i{font-size:48px; padding:5px}
+      dt:hover + dd {color:#c08;}
+      footer {border-top:1px solid #999}
       
     </style>
   </head>
   <body>
     <header>
-      <h1>Gestos <small>Multitouch gestures iconic font</small></h1>
+      <h1><strong>Gestos <small>Multi-    touch gestures iconic font</small></strong></h1>
     </header>
-    <section>
-      <h2>Gestos icons list</h2>
-      <h3>One finger</h3>
-      <ul>
-        <li><i class="icon-hold-wait"></i><strong> Hold and Wait </strong></li>
-        <li><i class="icon-hold"></i><strong> Hold </strong></li>
-        <li><i class="icon-tap-hold"></i><strong> Tap and hold</strong></li>
-        <li><i class="icon-tap-hold-wait"></i><strong> Tap and hold and wait</strong></li>
-      </ul>
+    <section id="collapse" data-collapse="persist">
+      <h2>Taps </h2>
+      <dl>
+        <dt><i class="gest-hold"></i></dt>
+        <dd>Hold </dd>
+        <dt><i class="gest-hold-element"></i></dt>
+        <dd>Hold element</dd>
+        <dt><i class="gest-long-hold"></i></dt>
+        <dd>Long hold </dd>
+        <dt><i class="gest-hold-wait"></i></dt>
+        <dd>Hold and wait</dd>
+        <dt><i class="gest-no-hold"></i></dt>
+        <dd>No hold </dd>
+        <dt><i class="gest-tap"></i></dt>
+        <dd>Tap </dd>
+        <dt><i class="gest-double-tap"></i></dt>
+        <dd>Double tap </dd>
+        <dt><i class="gest-triple-tap"></i></dt>
+        <dd>Triple tap </dd>
+        <dt><i class="gest-no-tap"></i></dt>
+        <dd>No tap </dd>
+        <dt><i class="gest-tap-hold"></i></dt>
+        <dd>Tap and hold </dd>
+        <dt><i class="gest-tap-long-hold"></i></dt>
+        <dd>Tap and long hold</dd>
+        <dt><i class="gest-2f-hold--tap"></i></dt>
+        <dd>Left hold, right tap</dd>
+        <dt><i class="gest-2f-hold--double-tap"></i></dt>
+        <dd>Left hold, right double tap</dd>
+        <dt><i class="gest-2f-tap--hold"></i></dt>
+        <dd>Left tap, right hold</dd>
+        <dt><i class="gest-2f-double-tap--hold"></i></dt>
+        <dd>Left double tap, right hold</dd>
+      </dl>
+      <h2>Movements</h2>
+      <dl>
+        <dt><i class="gest-scroll-free"></i><i class="gest-scroll-horizontal"></i><i class="gest-scroll-vertical"></i></dt>
+        <dd>Scroll <em>free/horizontal/vertical</em></dd>
+        <dt><i class="gest-scroll-element-free"></i><i class="gest-scroll-element-horizontal"></i><i class="gest-scroll-element-vertical"></i></dt>
+        <dd>Scroll element <em>free/horizontal/vertical</em></dd>
+        <dt><i class="gest-swipe-free"></i><i class="gest-swipe-horizontal"></i><i class="gest-swipe-vertical"></i></dt>
+        <dd>Swipe <em>free/horizontal/vertical</em></dd>
+        <dt><i class="gest-flick-free"></i><i class="gest-flick-horizontal"></i><i class="gest-flick-vertical"></i></dt>
+        <dd>Flick <em>free/horizontal/vertical</em></dd>
+        <dt><i class="gest-pinch"></i><i class="gest-pinch-ending"></i></dt>
+        <dd>Pinch <em>& pinch ending</em></dd>
+        <dt><i class="gest-spread"></i><i class="gest-spread-ending"></i></dt>
+        <dd>Spread <em>& spread ending</em></dd>
+        <dt><i class="gest-arc"></i><i class="gest-arc-ccw"></i></dt>
+        <dd>Arc <em>& arc counterclockwise</em></dd>
+        <dt><i class="gest-rotate"></i><i class="gest-rotate-ccw"></i></dt>
+        <dd>Rotate <em>& rotate counterclockwise</em></dd>
+        <dt><i class="gest-2f-rotate"></i><i class="gest-2f-rotate-ccw"></i></dt>
+        <dd>2 fingers rotate <em>& 2FR counterclockwise</em></dd>
+      </dl>
+      <h2>Advanced gestures</h2>
+      <dl>
+        <dt><i class="gest-swipe-left"></i><i class="gest-swipe-right"></i><i class="gest-swipe-up"></i><i class="gest-swipe-down"></i></dt>
+        <dd>Swipe <em>left/right/up/down</em> </dd>
+        <dt><i class="gest-swipe-left-edge"></i><i class="gest-swipe-right-edge"></i><i class="gest-swipe-up-edge"></i><i class="gest-swipe-down-edge"></i></dt>
+        <dd>Swipe <em>left/right/up/down</em> from edge</dd>
+        <dt><i class="gest-swipe-left-edge-alt"></i><i class="gest-swipe-right-edge-alt"></i><i class="gest-swipe-up-edge-alt"></i><i class="gest-swipe-down-edge-alt"></i></dt>
+        <dd>Swipe <em>left/right/up/down</em> from edge Alt.</dd>
+        <dt><i class="gest-flick-left-edge"></i><i class="gest-flick-right-edge"></i><i class="gest-flick-up-edge"></i><i class="gest-flick-down-edge"></i></dt>
+        <dd>Flick <em>left/right/up/down</em> from edge</dd>
+        <dt><i class="gest-flick-left-edge-alt"></i><i class="gest-flick-right-edge-alt"></i><i class="gest-flick-up-edge-alt"></i><i class="gest-flick-down-edge-alt"></i></dt>
+        <dd>Flick <em>left/right/up/down</em> from edge Alt.</dd>
+        <dt><i class="gest-flick-left"></i><i class="gest-flick-right"></i><i class="gest-flick-up"></i><i class="gest-flick-down"></i></dt>
+        <dd>Flick <em>left/right/up/down</em></dd>
+        <dt><i class="gest-drag-left"></i><i class="gest-drag-right"></i><i class="gest-drag-elp"></i><i class="gest-drag-down"> </i></dt>
+        <dd>Drag <em>left/right/up/down</em></dd>
+        <dt><i class="gest-drag-element-left"></i><i class="gest-drag-element-right"></i><i class="gest-drag-element-up"></i><i class="gest-drag-element-down"></i></dt>
+        <dd>Drag element <em>left/right/up/down</em></dd>
+        <dt><i class="gest-drag-hold-left"></i><i class="gest-drag-hold-right"></i><i class="gest-drag-hold-up"></i><i class="gest-drag-hold-down"></i></dt>
+        <dd>Drag <em>left/right/up/down</em> and hold</dd>
+        <dt><i class="gest-drag-hold-element-left"></i><i class="gest-drag-hold-element-right"></i><i class="gest-drag-hold-element-up"></i><i class="gest-drag-hold-element-down"></i></dt>
+        <dd>Drag <em>left/right/up/down</em> and hold element</dd>
+        <dt><i class="gest-nudge-left"></i><i class="gest-nudge-right"></i><i class="gest-nudge-up"></i><i class="gest-nudge-down"></i></dt>
+        <dd>Nudge <em>left/right/up/down</em></dd>
+        <dt><i class="gest-nudge-element-left"></i><i class="gest-nudge-element-right"></i><i class="gest-nudge-element-up"></i><i class="gest-nudge-element-down"></i></dt>
+        <dd>Nudge element <em>left/right/up/down</em></dd>
+      </dl>
+      <h2>Fingers taps</h2>
+      <dl class="no-cols">
+        <dt><i class="gest-2f-hold"></i><i class="gest-2f-long-hold"></i><i class="gest-2f-hold-element"></i><i class="gest-2f-tap"></i><i class="gest-2f-double-tap"></i><i class="gest-2f-triple-tap"></i><i class="gest-2f-tap-hold"></i><i class="gest-2f-tap-long-hold"></i></dt>
+        <dd>2 fingers <em>hold/long hold/hold element/tap/double tap/triple tap/tap and hold/tap and long hold</em>  </dd>
+        <dt><i class="gest-3f-hold"></i><i class="gest-3f-long-hold"></i><i class="gest-3f-hold-element"></i><i class="gest-3f-tap"></i><i class="gest-3f-double-tap"></i><i class="gest-3f-triple-tap"></i><i class="gest-3f-tap-hold"></i><i class="gest-3f-tap-long-hold"></i></dt>
+        <dd>3 fingers <em>hold/long hold/hold element/tap/double tap/triple tap/tap and hold/tap and long hold</em>  </dd>
+        <dt><i class="gest-4f-hold"></i><i class="gest-4f-long-hold"></i><i class="gest-4f-hold-element"></i><i class="gest-4f-tap"></i><i class="gest-4f-double-tap"></i><i class="gest-4f-triple-tap"></i><i class="gest-4f-tap-hold"></i><i class="gest-4f-tap-long-hold"></i></dt>
+        <dd>4 fingers <em>hold/long hold/hold element/tap/double tap/triple tap/tap and hold/tap and long hold</em>  </dd>
+        <dt><i class="gest-4f-hold-lh"></i><i class="gest-4f-long-hold-lh"></i><i class="gest-4f-hold-element-lh"></i><i class="gest-4f-tap-lh"></i><i class="gest-4f-double-tap-lh"></i><i class="gest-4f-triple-tap-lh"></i><i class="gest-4f-tap-hold-lh"></i><i class="gest-4f-tap-long-hold-lh"></i></dt>
+        <dd>4 fingers <em>hold/long hold/hold element/tap/double tap/triple tap/tap and hold/tap and long hold</em> left hand  </dd>
+        <dt><i class="gest-5f-hold"></i><i class="gest-5f-long-hold"></i><i class="gest-5f-hold-element"></i><i class="gest-5f-tap"></i><i class="gest-5f-double-tap"></i><i class="gest-5f-triple-tap"></i><i class="gest-5f-tap-hold"></i><i class="gest-5f-tap-long-hold"></i></dt>
+        <dd>5 fingers <em>hold/long hold/hold element/tap/double tap/triple tap/tap and hold/tap and long hold</em>  </dd>
+        <dt><i class="gest-5f-hold-lh"></i><i class="gest-5f-long-hold-lh"></i><i class="gest-5f-hold-element-lh"></i><i class="gest-5f-tap-lh"></i><i class="gest-5f-double-tap-lh"></i><i class="gest-5f-triple-tap-lh"></i><i class="gest-5f-tap-hold-lh"></i><i class="gest-5f-tap-long-hold-lh"></i></dt>
+        <dd>5 fingers <em>hold/long hold/hold element/tap/double tap/triple tap/tap and hold/tap and long hold</em> left hand  </dd>
+      </dl>
+      <h2>2 fingers gestures</h2>
+      <dl class="two-cols">
+        <dt><i class="gest-2f-drag-left"></i><i class="gest-2f-drag-right"></i><i class="gest-2f-drag-up"></i><i class="gest-2f-drag-down"></i></dt>
+        <dd>2 fingers <em>drag</em>  </dd>
+        <dt><i class="gest-2f-drag-element-left"></i><i class="gest-2f-drag-element-right"></i><i class="gest-2f-drag-element-up"></i><i class="gest-2f-drag-element-down"></i></dt>
+        <dd>2 fingers <em>drag element</em>  </dd>
+        <dt><i class="gest-2f-swipe-left"></i><i class="gest-2f-swipe-right"></i><i class="gest-2f-swipe-up"></i><i class="gest-2f-swipe-down"></i></dt>
+        <dd>2 fingers <em>swipe</em>  </dd>
+        <dt><i class="gest-2f-flick-left"></i><i class="gest-2f-flick-right"></i><i class="gest-2f-flick-up"></i><i class="gest-2f-flick-down"></i></dt>
+        <dd>2 fingers <em>flick</em>      </dd>
+        <dt><i class="gest-2f-scroll-free"></i><i class="gest-2f-scroll-horizontal"></i><i class="gest-2f-scroll-vertical"></i></dt>
+        <dd>2 fingers <em>scroll</em>      </dd>
+      </dl>
+      <h2>3 fingers gestures</h2>
+      <dl class="two-cols">
+        <dt><i class="gest-3f-drag-left"></i><i class="gest-3f-drag-right"></i><i class="gest-3f-drag-up"></i><i class="gest-3f-drag-down"></i></dt>
+        <dd>3 fingers <em>drag</em>  </dd>
+        <dt><i class="gest-3f-drag-element-left"></i><i class="gest-3f-drag-element-right"></i><i class="gest-3f-drag-element-up"></i><i class="gest-3f-drag-element-down"></i></dt>
+        <dd>3 fingers <em>darg element</em>  </dd>
+        <dt><i class="gest-3f-swipe-left"></i><i class="gest-3f-swipe-right"></i><i class="gest-3f-swipe-up"></i><i class="gest-3f-swipe-down"></i></dt>
+        <dd>3 fingers <em>swipe</em>  </dd>
+        <dt><i class="gest-3f-flick-left"></i><i class="gest-3f-flick-right"></i><i class="gest-3f-flick-up"></i><i class="gest-3f-flick-down"></i></dt>
+        <dd>3 fingers <em>flick</em>      </dd>
+        <dt><i class="gest-3f-scroll-free"></i><i class="gest-3f-scroll-horizontal"></i><i class="gest-3f-scroll-vertical"></i></dt>
+        <dd>3 fingers <em>scroll</em>    </dd>
+      </dl>
+      <h2>4 fingers gestures </h2>
+      <dl class="two-cols">
+        <dt><i class="gest-4f-drag-left"></i><i class="gest-4f-drag-right"></i><i class="gest-4f-drag-up"></i><i class="gest-4f-drag-down"></i></dt>
+        <dd>4 fingers <em>drag</em>  </dd>
+        <dt><i class="gest-4f-drag-element-left"></i><i class="gest-4f-drag-element-right"></i><i class="gest-4f-drag-element-up"></i><i class="gest-4f-drag-element-down"></i></dt>
+        <dd>4 fingers <em>darg element</em>  </dd>
+        <dt><i class="gest-4f-swipe-left"></i><i class="gest-4f-swipe-right"></i><i class="gest-4f-swipe-up"></i><i class="gest-4f-swipe-down"></i></dt>
+        <dd>4 fingers <em>swipe</em>  </dd>
+        <dt><i class="gest-4f-flick-left"></i><i class="gest-4f-flick-right"></i><i class="gest-4f-flick-up"></i><i class="gest-4f-flick-down"></i></dt>
+        <dd>4 fingers <em>flick</em>      </dd>
+        <dt><i class="gest-4f-scroll-free"></i><i class="gest-4f-scroll-horizontal"></i><i class="gest-4f-scroll-vertical"></i></dt>
+        <dd>4 fingers <em>scroll</em>    </dd>
+      </dl>
+      <h2>4 fingers gestures <small>left hand</small></h2>
+      <dl class="two-cols">
+        <dt><i class="gest-4f-drag-left-lh"></i><i class="gest-4f-drag-right-lh"></i><i class="gest-4f-drag-up-lh"></i><i class="gest-4f-drag-down-lh"></i></dt>
+        <dd>4 fingers <em>drag</em>  </dd>
+        <dt><i class="gest-4f-drag-element-left-lh"></i><i class="gest-4f-drag-element-right-lh"></i><i class="gest-4f-drag-element-up-lh"></i><i class="gest-4f-drag-element-down-lh"></i></dt>
+        <dd>4 fingers <em>darg element</em>  </dd>
+        <dt><i class="gest-4f-swipe-left-lh"></i><i class="gest-4f-swipe-right-lh"></i><i class="gest-4f-swipe-up-lh"></i><i class="gest-4f-swipe-down-lh"></i></dt>
+        <dd>4 fingers <em>swipe</em>  </dd>
+        <dt><i class="gest-4f-flick-left-lh"></i><i class="gest-4f-flick-right-lh"></i><i class="gest-4f-flick-up-lh"></i><i class="gest-4f-flick-down-lh"></i></dt>
+        <dd>4 fingers <em>flick</em>      </dd>
+        <dt><i class="gest-4f-scroll-free-lh"></i><i class="gest-4f-scroll-horizontal-lh"></i><i class="gest-4f-scroll-vertical-lh"></i></dt>
+        <dd>4 fingers <em>scroll</em>    </dd>
+      </dl>
+      <h2>5 fingers gestures </h2>
+      <dl class="no-cols">
+        <dt><i class="gest-5f-drag-left"></i><i class="gest-5f-drag-right"></i><i class="gest-5f-drag-up"></i><i class="gest-5f-drag-down"></i></dt>
+        <dd>5 fingers <em>drag</em>  </dd>
+        <dt><i class="gest-5f-drag-element-left"></i><i class="gest-5f-drag-element-right"></i><i class="gest-5f-drag-element-up"></i><i class="gest-5f-drag-element-down"></i></dt>
+        <dd>5 fingers <em>darg element</em>  </dd>
+        <dt><i class="gest-5f-swipe-left"></i><i class="gest-5f-swipe-right"></i><i class="gest-5f-swipe-up"></i><i class="gest-5f-swipe-down"></i></dt>
+        <dd>5 fingers <em>swipe</em>  </dd>
+        <dt><i class="gest-5f-flick-left"></i><i class="gest-5f-flick-right"></i><i class="gest-5f-flick-up"></i><i class="gest-5f-flick-down"></i></dt>
+        <dd>5 fingers <em>flick</em>      </dd>
+        <dt><i class="gest-5f-scroll-free"></i><i class="gest-5f-scroll-horizontal"></i><i class="gest-5f-scroll-vertical"></i></dt>
+        <dd>5 fingers <em>scroll</em>    </dd>
+      </dl>
+      <h2>5 fingers gestures <small>left hand</small></h2>
+      <dl class="no-cols">
+        <dt><i class="gest-5f-drag-left-lh"></i><i class="gest-5f-drag-right-lh"></i><i class="gest-5f-drag-up-lh"></i><i class="gest-5f-drag-down-lh"></i></dt>
+        <dd>5 fingers <em>drag</em>  </dd>
+        <dt><i class="gest-5f-drag-element-left-lh"></i><i class="gest-5f-drag-element-right-lh"></i><i class="gest-5f-drag-element-up-lh"></i><i class="gest-5f-drag-element-down-lh"></i></dt>
+        <dd>5 fingers <em>darg element</em>  </dd>
+        <dt><i class="gest-5f-swipe-left-lh"></i><i class="gest-5f-swipe-right-lh"></i><i class="gest-5f-swipe-up-lh"></i><i class="gest-5f-swipe-down-lh"></i></dt>
+        <dd>5 fingers <em>swipe</em>  </dd>
+        <dt><i class="gest-5f-flick-left-lh"></i><i class="gest-5f-flick-right-lh"></i><i class="gest-5f-flick-up-lh"></i><i class="gest-5f-flick-down-lh"></i></dt>
+        <dd>5 fingers <em>flick</em>      </dd>
+        <dt><i class="gest-5f-scroll-free-lh"></i><i class="gest-5f-scroll-horizontal-lh"></i><i class="gest-5f-scroll-vertical-lh"></i></dt>
+        <dd>5 fingers <em>scroll</em>  </dd>
+      </dl>
     </section>
     <footer>
-      <p>© Albert Casado</p>
+      <p>© Albert Casado - March 2013</p>
     </footer>
+    <script type="text/javascript">
+      $("#collapse").collapse();
+      
+      
+    </script>
   </body>
 </html>
