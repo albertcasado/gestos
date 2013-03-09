@@ -20,7 +20,7 @@ html
      *{font-family: "Hevetica Neue", Helvetica, Arial, sans-serif; font-weight:300;}
      strong {font-weight:600;}
      small {color:#7f7f7f;}
-     body {width:978px; margin:0 auto;}
+     body {max-width:978px; margin:0 auto;}
      h2 a{border-bottom:1px solid #999;text-decoration:none; color:#333; display:block;}
      h2 a:hover {color:#c08;}
      h2 a:before {content:"+";color:#c08; font-weight:600; padding:5px;}
@@ -34,6 +34,10 @@ html
      dt:hover i{ color:#08c; color: rgba(0,120,190, 0.75); text-shadow: 0 1px 3px #fff, 0 0 0 #000, 0px 1x 3px #fff;}
      dt:hover + dd { color:#c08;}
      footer {border-top:1px solid #999}
+     @media (max-width: 600px) {
+      dl, dl.two-cols {-webkit-column-count:1 !important;-moz-column-count:1 !important;-ms-column-count:1 !important;column-count:1 !important;}
+      body {padding:0 1em;}
+     }
 
   body
     header
