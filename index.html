@@ -1,11 +1,13 @@
 <!DOCTYPE html>
+<!-- Please attribute: "Gestos. Albert Casado - https://github.com/albertcasado/gestos"-->
 <html>
   <head>
     <title>Gestos. Multi-touch gestures iconic font</title>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta author="https://github.com/albertcasado/gestos">
     <meta name="description" content="Gestos Multitouch gestures iconic font">
-    <meta name="viewport" content="width=device-width">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0, maximum-scale=1">
     <link rel="stylesheet" href="css/gestos.css">
     <!-- collapse for presentation-->
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
@@ -22,10 +24,11 @@
       h2 a:hover {color:#c08;}
       h2 a:before {content:"+";color:#c08; font-weight:600; padding:5px;}
       h2.open a:before {content:"-";padding-right:11px;}
-      dl {-webkit-column-count:3; text-align:center; margin-bottom:5em;}
-      dl.no-cols {-webkit-column-count:1 !important;}
-      dl.two-cols {-webkit-column-count:2 !important;}
+      dl {-webkit-column-count:3;-moz-column-count:3;-ms-column-count:3;column-count:3; text-align:center; margin-bottom:5em;}
+      dl.no-cols {-webkit-column-count:1 !important;-moz-column-count:1 !important;-ms-column-count:1 !important;column-count:1 !important;}
+      dl.two-cols {-webkit-column-count:2 !important;-moz-column-count:2 !important;-ms-column-count:2 !important;column-count:2 !important;}
       dd {margin: 1em 0 2em; color:#7f7f7f;}
+      dt {-webkit-break-after: avoid;-moz-break-after: avoid;break-after: avoid;}
       i{font-size:48px; padding:5px}
       dt:hover + dd {color:#c08;}
       footer {border-top:1px solid #999}
@@ -34,7 +37,10 @@
   </head>
   <body>
     <header>
-      <h1><strong>Gestos <small>Multi-    touch gestures iconic font</small></strong></h1>
+      <h1><strong>Gestos <small>Multi- touch gestures iconic font</small></strong></h1>
+      <h2>More than 250 icons</h2>
+      <p>Follow me on <a href="https://github.com/albertcasado/gestos">https://github.com/albertcasado/gestos</a></p>
+      <p>Tested Internet Explorer 8, 9 and 10, Firefox, Chrome and Safari.</p>
     </header>
     <section id="collapse" data-collapse="persist">
       <h2>Taps </h2>
@@ -189,8 +195,6 @@
       <dl class="no-cols">
         <dt><i class="gest-5f-drag-left"></i><i class="gest-5f-drag-right"></i><i class="gest-5f-drag-up"></i><i class="gest-5f-drag-down"></i></dt>
         <dd>5 fingers <em>drag</em>  </dd>
-        <dt><i class="gest-5f-drag-element-left"></i><i class="gest-5f-drag-element-right"></i><i class="gest-5f-drag-element-up"></i><i class="gest-5f-drag-element-down"></i></dt>
-        <dd>5 fingers <em>darg element</em>  </dd>
         <dt><i class="gest-5f-swipe-left"></i><i class="gest-5f-swipe-right"></i><i class="gest-5f-swipe-up"></i><i class="gest-5f-swipe-down"></i></dt>
         <dd>5 fingers <em>swipe</em>  </dd>
         <dt><i class="gest-5f-flick-left"></i><i class="gest-5f-flick-right"></i><i class="gest-5f-flick-up"></i><i class="gest-5f-flick-down"></i></dt>
@@ -202,14 +206,19 @@
       <dl class="no-cols">
         <dt><i class="gest-5f-drag-left-lh"></i><i class="gest-5f-drag-right-lh"></i><i class="gest-5f-drag-up-lh"></i><i class="gest-5f-drag-down-lh"></i></dt>
         <dd>5 fingers <em>drag</em>  </dd>
-        <dt><i class="gest-5f-drag-element-left-lh"></i><i class="gest-5f-drag-element-right-lh"></i><i class="gest-5f-drag-element-up-lh"></i><i class="gest-5f-drag-element-down-lh"></i></dt>
-        <dd>5 fingers <em>darg element</em>  </dd>
         <dt><i class="gest-5f-swipe-left-lh"></i><i class="gest-5f-swipe-right-lh"></i><i class="gest-5f-swipe-up-lh"></i><i class="gest-5f-swipe-down-lh"></i></dt>
         <dd>5 fingers <em>swipe</em>  </dd>
         <dt><i class="gest-5f-flick-left-lh"></i><i class="gest-5f-flick-right-lh"></i><i class="gest-5f-flick-up-lh"></i><i class="gest-5f-flick-down-lh"></i></dt>
         <dd>5 fingers <em>flick</em>      </dd>
         <dt><i class="gest-5f-scroll-free-lh"></i><i class="gest-5f-scroll-horizontal-lh"></i><i class="gest-5f-scroll-vertical-lh"></i></dt>
         <dd>5 fingers <em>scroll</em>  </dd>
+      </dl>
+      <h2>Draws </h2>
+      <dl class="no-cols">
+        <dt><i class="gest-draw-circle"></i><i class="gest-draw-line-vertical"></i><i class="gest-draw-triangle-inverse"></i><i class="gest-draw-triangle"></i><i class="gest-draw-square"></i><i class="gest-draw-rhombus"></i></dt>
+        <dd>Draw <em>circle/line vertical/triangle inverse/triange/square/rhombus</em>  </dd>
+        <dt><i class="gest-draw-moon-inverse"></i><i class="gest-draw-moon"></i><i class="gest-draw-line-horizontal"></i><i class="gest-draw-ex"></i><i class="gest-draw-line-diagonal-inverse"></i><i class="gest-draw-line-diagonal"></i></dt>
+        <dd>Draw <em>moon inverse/moon/line horizontal/ex/line diagonal inverse/line diagonal</em>  </dd>
       </dl>
     </section>
     <footer>

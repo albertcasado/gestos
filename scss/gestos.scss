@@ -1,12 +1,10 @@
 /*!
- *  Gestos 0.1
+ *  Gestos 0.9
  *  Multi-touch gestures iconic font
  *  -------------------------------------------------------
- *
  *  License
  *  -------------------------------------------------------
  *  Please attribute: "Gestos. Albert Casado - https://github.com/albertcasado/gestos"
- *
  */
 
 $fontGestos:   "../fonts" !default;
@@ -19,11 +17,11 @@ $gestMuted:         #eee;
 @font-face {
   font-family: 'Gestos';
   src: url('#{$fontGestos}/Gestos-Regular.eot');
-  src: local('☺'),
-    //url('#{$fontGestos}/Gestos-Regular.eot') format("embedded-opentype"),
-    //url('#{$fontGestos}/Gestos-Regular.woff') format("woff"),
-    url('#{$fontGestos}/Gestos-Regular.ttf') format("truetype"),
-    url('#{$fontGestos}/Gestos-Regular.svg') format('svg');
+  src:
+    url('#{$fontGestos}/Gestos-Regular.eot?#iefix') format("embedded-opentype"),
+    url('#{$fontGestos}/Gestos-Regular.woff') format("woff"),
+    url('#{$fontGestos}/Gestos-Regular.ttf') format("truetype");
+    //url('#{$fontGestos}/Gestos-Regular.svg') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -117,16 +115,16 @@ a {
 .gest-3f-swipe-right:before           { content: "\002e"; }
 .gest-3f-swipe-up:before              { content: "\002f"; }
 
-//.gest-2f-flick-left:before            { content: "\0030"; }
-//.gest-2f-flick-left:before            { content: "\0031"; }
-//.gest-2f-flick-right:before           { content: "\0032"; }
-//.gest-2f-flick-up:before              { content: "\0033"; }
-//.gest-2f-flick-down:before            { content: "\0034"; }
-//.gest-2f-drag-element-left:before     { content: "\0035"; }
-//.gest-2f-drag-element-right:before    { content: "\0036"; }
-//.gest-2f-drag-element-up:before       { content: "\0037"; }
-//.gest-2f-drag-element-down:before     { content: "\0038"; }
-//.gest-3f-drag-left:before             { content: "\0039"; }
+.gest-draw-circle:before              { content: "\0030"; }
+.gest-draw-line-vertical:before       { content: "\0031"; }
+.gest-draw-triangle-inverse:before    { content: "\0032"; }
+.gest-draw-triangle:before            { content: "\0033"; }
+.gest-draw-square:before              { content: "\0034"; }
+.gest-draw-rhombus:before             { content: "\0035"; }
+.gest-draw-moon-inverse:before        { content: "\0036"; }
+.gest-draw-moon:before                { content: "\0037"; }
+.gest-draw-line-horizontal:before     { content: "\0038"; }
+.gest-draw-ex:before                  { content: "\0039"; }
 .gest-3f-swipe-down:before            { content: "\003a"; }
 .gest-3f-flick-left:before            { content: "\003b"; }
 .gest-3f-flick-right:before           { content: "\003c"; }
@@ -201,38 +199,36 @@ a {
 .gest-4f-drag-up:before               { content: "\007d"; }
 .gest-4f-drag-down:before             { content: "\007e"; }
 
-//.gest-4f-swipe-:before                { content: "\00a0"; }
+
 .gest-4f-swipe-left:before            { content: "\00a1"; }
 .gest-4f-swipe-right:before           { content: "\00a2"; }
 .gest-4f-swipe-up:before              { content: "\00a3"; }
-//.gest-4f-swipe-:before                { content: "\00a4"; }
+.gest-4f-swipe-down:before            { content: "\00a4"; }
 .gest-4f-flick-left:before            { content: "\00a5"; }
 .gest-4f-flick-right:before           { content: "\00a6"; }
 .gest-4f-flick-up:before              { content: "\00a7"; }
 .gest-4f-flick-down:before            { content: "\00a8"; }
-//.gest-4f-swipe-left:before            { content: "\00a9"; }
-//.gest-4f-swipe-left:before            { content: "\00aa"; }
+.gest-draw-line-diagonal:before       { content: "\00a9"; }
+.gest-4f-scroll-horizontal-lh:before  { content: "\00aa"; }
 .gest-4f-drag-element-left-lh:before  { content: "\00ab"; }
 .gest-4f-drag-element-right-lh:before { content: "\00ac"; }
-//.gest-4f-drag-element-up-lh:before    { content: "\00ad"; }
 .gest-4f-drag-element-up-lh:before    { content: "\00ae"; }
 .gest-4f-drag-element-down-lh:before  { content: "\00af"; }
 
 .gest-4f-drag-left-lh:before          { content: "\00b0"; }
 .gest-4f-drag-right-lh:before         { content: "\00b1"; }
-//.gest-4f-drag-right-lh:before         { content: "\00b2"; }
-//.gest-4f-swipe-up:before              { content: "\00b3"; }
+.gest-5f-scroll-horizontal-lh:before  { content: "\00b2"; }
+.gest-5f-scroll-vertical-lh:before    { content: "\00b3"; }
 .gest-4f-drag-up-lh:before            { content: "\00b4"; }
-//.gest-4f-drag-down-lh:before          { content: "\00b5"; }
 .gest-4f-drag-down-lh:before          { content: "\00b6"; }
 .gest-4f-swipe-left-lh:before         { content: "\00b7"; }
 .gest-4f-swipe-right-lh:before        { content: "\00b8"; }
-//.gest-4f-swipe-left:before            { content: "\00b9"; }
-//.gest-4f-swipe-left:before            { content: "\00ba"; }
+.gest-5f-scroll-free-lh:before        { content: "\00b9"; }
+.gest-4f-scroll-horizontal:before    { content: "\00ba"; }
 .gest-4f-swipe-up-lh:before           { content: "\00bb"; }
-//.gest-4f-drag-element-right-lh:before { content: "\00bc"; }
-//.gest-4f-drag-element-up-lh:before    { content: "\00bd"; }
-//.gest-4f-drag-element-up-lh:before    { content: "\00be"; }
+.gest-5f-scroll-horizontal:before     { content: "\00bc"; }
+.gest-5f-scroll-free:before           { content: "\00bd"; }
+.gest-5f-scroll-vertical:before       { content: "\00be"; }
 .gest-4f-swipe-down-lh:before         { content: "\00bf"; }
 
 
@@ -242,7 +238,7 @@ a {
 .gest-swipe-free:before               { content: "\00c3"; }
 .gest-nudge-element-down:before       { content: "\00c4"; }
 .gest-swipe-vertical:before           { content: "\00c5"; }
-//.gest-nudge-element-up:before         { content: "\00c6"; }
+.gest-4f-scroll-free:before           { content: "\00c6"; }
 .gest-scroll-element-free:before      { content: "\00c7"; }
 .gest-2f-drag-left:before             { content: "\00c8"; }
 .gest-2f-drag-right:before            { content: "\00c9"; }
@@ -276,7 +272,7 @@ a {
 .gest-flick-free:before               { content: "\00e3"; }
 .gest-swipe-down:before               { content: "\00e4"; }
 .gest-swipe-horizontal:before         { content: "\00e5"; }
-//.gest-swipe-up:before                 { content: "\00e6"; }
+.gest-4f-scroll-free-lh:before        { content: "\00e6"; }
 .gest-no-tap:before                   { content: "\00e7"; }
 .gest-drag-element-left:before        { content: "\00e8"; }
 .gest-drag-element-right:before       { content: "\00e9"; }
@@ -304,6 +300,8 @@ a {
 .gest-pinch-ending:before             { content: "\00fe"; }
 .gest-swipe-down-edge:before          { content: "\00ff"; }
 
+.gest-4f-scroll-vertical-lh:before    { content: "\0132"; }
+.gest-4f-scroll-vertical:before       { content: "\0133"; }
 .gest-4f-flick-up-lh:before           { content: "\013f"; }
 
 .gest-4f-flick-down-lh:before         { content: "\0140"; }
@@ -365,6 +363,8 @@ a {
 .gest-5f-swipe-up-lh:before           { content: "\2030"; }
 .gest-5f-swipe-up:before              { content: "\2039"; }
 .gest-5f-swipe-down-lh:before         { content: "\203a"; }
+
+.gest-draw-line-diagonal-inverse:before { content: "\2044"; }
 
 .gest-5f-swipe-down:before            { content: "\20ac"; }
 
